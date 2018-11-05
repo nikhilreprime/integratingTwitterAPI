@@ -1,8 +1,8 @@
-const passport = require('passport');
+const utility = require('./../services/utility')
 
 module.exports = (app) => {
   app.get('/profile/:userId',
-    passport.authenticate('twitter', { failureRedirect: '/login' }),
+    utility.loggedIn,
     (req, res) => {
       var userId = req.params.userId;
       res.send({ message: 'Profile page' })

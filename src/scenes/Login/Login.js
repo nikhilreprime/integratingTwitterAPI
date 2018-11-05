@@ -1,9 +1,8 @@
-
 /*** Imports ***/
 
 /* Library imports */
 import React, { Component } from "react";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 /* Component imports */
 
@@ -16,12 +15,8 @@ class Login extends Component {
     super(props);
   }
 
-  componentWillMount() {
-
-  }
-  componentDidMount() {
-
-  }
+  componentWillMount() {}
+  componentDidMount() {}
 
   // Server calls
 
@@ -31,28 +26,25 @@ class Login extends Component {
 
   // views to be rendered
 
-
-
   //finally render
   render() {
-    return;
+    return (
+      <div>
+        This is LoginPage
+      </div>
+    );
   }
-
 }
 
 /**
  * all prop types which can be passed to this component
  */
-Login.propTypes = {
-
-};
+Login.propTypes = {};
 
 /**
  * Only if default initialization is required
  * Default props value for this component
  */
-Login.defaultProps = {
-
-};
+Login.defaultProps = {};
 
 export default Login;

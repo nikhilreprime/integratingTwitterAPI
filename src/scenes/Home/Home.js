@@ -35,7 +35,11 @@ class Home extends Component {
 
   //finally render
   render() {
-    return;
+    return (
+      <div>
+        This is Home Page
+      </div>
+    );
   }
 
 }

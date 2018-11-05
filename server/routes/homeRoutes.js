@@ -1,12 +1,12 @@
-const passport = require("passport");
+const utility = require('./../services/utility')
 
 module.exports = app => {
   // Route handler get , put, post, patch, delete
   app.get(
-    "/",
-    passport.authenticate("twitter", { failureRedirect: "/login" }),
+    "/", utility.loggedIn,
     (req, res) => {
-      res.send({ message: "You are signedIn" });
+      console.log("Home page")
+      res.send({ message: "this is home page" });
     }
   );
 };
