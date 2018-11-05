@@ -1,10 +1,10 @@
 const passport = require('passport');
 
 module.exports = (app) => {
-  app.get('/login',
-    (req, res) => {
-      res.send({ message: 'You are onloginPage' })
-    });
+  // app.get('/login',
+  //   (req, res) => {
+  //     res.send({ message: 'You are onloginPage' })
+  //   });
 
   // To handle twitter signin button click 
   app.get('/auth/twitter',

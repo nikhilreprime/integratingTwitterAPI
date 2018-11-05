@@ -6,7 +6,7 @@ import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
 /* Component imports */
-
+import {xhrGetFeedsList} from './services/Services'
 /* Style imports */
 
 /*** End Imports ***/
@@ -20,7 +20,11 @@ class Home extends Component {
 
   }
   componentDidMount() {
+    xhrGetFeedsList({}, ()=>{
 
+    },()=>{
+      
+    })
   }
 
   // Server calls

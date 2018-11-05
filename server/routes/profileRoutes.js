@@ -5,7 +5,12 @@ module.exports = (app) => {
     utility.loggedIn,
     (req, res) => {
       var userId = req.params.userId;
-      res.send({ message: 'Profile page' })
+      res.send({ 
+        auth: {
+          user_login_done : true
+        },
+        message: 'Profile page' 
+      })
     });
 
 }

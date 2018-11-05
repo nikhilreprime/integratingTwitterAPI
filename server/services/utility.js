@@ -1,11 +1,14 @@
 
 module.exports = {
-  loggedIn : function(req, res, next) {
+  loggedIn: function (req, res, next) {
     if (req.user) {
-        next();
+      next();
     } else {
-        res.redirect('/login');
+      res.send({
+        auth: {
+          user_login_done : false
+        }
+      });
     }
   }
 }
- 
