@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
 
 /*** End Imports ***/
 
-class TwitterCard extends Component {
+class Card extends Component {
   constructor(props) {
     super(props);
   }
@@ -35,7 +35,16 @@ class TwitterCard extends Component {
 
   //finally render
   render() {
-    return;
+    return(
+      <div className="card-container">
+          title
+          description
+          attached_url
+          mediaContainer
+
+          stats section
+      </div>
+    );
   }
 
 }
@@ -43,7 +52,7 @@ class TwitterCard extends Component {
 /**
  * all prop types which can be passed to this component
  */
-TwitterCard.propTypes = {
+Card.propTypes = {
 
 };
 
@@ -51,8 +60,8 @@ TwitterCard.propTypes = {
  * Only if default initialization is required
  * Default props value for this component
  */
-TwitterCard.defaultProps = {
+Card.defaultProps = {
 
 };
 
-export default TwitterCard;
+export default Card;
