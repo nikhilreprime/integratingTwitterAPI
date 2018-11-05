@@ -20,10 +20,10 @@ class Home extends Component {
 
   }
   componentDidMount() {
-    xhrGetFeedsList({}, ()=>{
-
+    xhrGetFeedsList({}, (data)=>{
+      console.log(data.feeds_list)
     },()=>{
-      
+
     })
   }
 
