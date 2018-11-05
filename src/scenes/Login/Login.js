@@ -3,10 +3,12 @@
 /* Library imports */
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import BtnSolid from "../../components/Buttons/BtnSolid/BtnSolid";
 
 /* Component imports */
 
 /* Style imports */
+import './styles.css';
 
 /*** End Imports ***/
 
@@ -23,14 +25,27 @@ class Login extends Component {
   // helper function
 
   // listeners
-
+  onGoogleLoginClicked =() =>{
+    window.location = "/auth/google"
+  }
   // views to be rendered
 
   //finally render
   render() {
     return (
-      <div>
-        This is LoginPage
+      <div className="login-page-container">
+        Login to WHITE PANDA
+        <BtnSolid 
+          onClick = {this.onGoogleLoginClicked}
+          title = {"Login with GOOGLE"}
+          customStyle = {
+            {
+              height : 'auto',
+              width : '200px',
+              marginTop: '20px'
+            }
+          }
+        />
       </div>
     );
   }

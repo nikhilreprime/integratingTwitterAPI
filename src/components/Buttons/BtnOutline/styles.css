@@ -1,0 +1,18 @@
+
+button.btn-outline-gen {
+  height: 40px;
+  border: 2px solid #4039CB;
+  background: #FFFFFF;
+  color: #3b05cb;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  border-radius: 3px;
+  transition: all 0.2s ease-out;
+  text-transform: uppercase;
+  box-shadow: none; 
+}
+button.btn-outline-gen:enabled:hover, button.btn-outline-gen:enabled:focus {
+  color: #3b05cb;
+  box-shadow: 0 1px 2px 0 rgba(10, 10, 100, 0.9); 
+}

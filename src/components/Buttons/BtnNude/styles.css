@@ -1,0 +1,10 @@
+button.btn-nude {
+  border: none;
+  outline: none;
+  background: none;
+  color: #3B05CB;
+  text-transform: uppercase; 
+}
+button.btn-nude:hover {
+  color: #3b05cb; 
+}
