@@ -10,9 +10,7 @@ export function xhrGetFeedsList (parms, onSuccess, onFailure) {
         timeout: Constants.REQ_TIMEOUT,
         method: 'get',
         url: Constants.ROUTE.GET_FEEDS_LIST,
-        params: {
-        //key value pair
-        }
+        params: parms
     }).then( res =>{
         let data = res.data ;
 

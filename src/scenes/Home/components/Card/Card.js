@@ -4,11 +4,15 @@
 /* Library imports */
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import CardSimple from "./components/CardTypes/CardSimple/CardSimple";
+import CardVideo from "./components/CardTypes/CardVideo/CardVideo";
+import CardPhoto from "./components/CardTypes/CardPhoto/CardPhoto";
+import StatsView from "./components/StatsView/StatsView";
 
 /* Component imports */
 
 /* Style imports */
-
+import './styles.css'
 /*** End Imports ***/
 
 class Card extends Component {
@@ -30,19 +34,41 @@ class Card extends Component {
   // listeners
 
   // views to be rendered
-
+  getFeedEntityView = (feedInfo) => {
+    let feedType = feedInfo.feedType;
+    let view = null
+    if (feedInfo.entities) {
+      switch (feedType) {
+        case "simple":
+          view = <CardSimple />
+          break;
+        case "video":
+          view = <CardVideo />
+          break;
+        case "image":
+          view = <CardPhoto />
+          break;
+        default:
+          break;
+      }
+    }
+    return view;
+  }
 
 
   //finally render
   render() {
-    return(
+    let { feedInfo } = this.props;
+    return (
       <div className="card-container">
-          title
-          description
-          attached_url
-          mediaContainer
+        title {feedInfo.title}
+        description {feedInfo.description}
+        attached_url
 
-          stats section
+        mediaContainer
+        {this.getFeedEntityView(feedInfo)}
+        stats section
+        <StatsView {...feedInfo.stats} />
       </div>
     );
   }
@@ -53,7 +79,7 @@ class Card extends Component {
  * all prop types which can be passed to this component
  */
 Card.propTypes = {
-
+  feedInfo: PropTypes.object
 };
 
 /**
